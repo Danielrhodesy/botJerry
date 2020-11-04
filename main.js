@@ -1,11 +1,16 @@
 const Discord = require('discord.js')
 const axios = require('axios')
 const client = new Discord.Client()
+require('dotenv').config()
+const fs = require('fs')
 
 //What you need to use the command
 const prefix = '-'
 
-const fs = require('fs')
+const riotApiKey = process.env.RIOT_API_KEY
+const discBotKey = process.env.DISCORD_BOT_KEY
+
+console.log(process.env.RIOT_API_KEY)
 
 client.commands = new Discord.Collection()
 
@@ -49,7 +54,7 @@ client.on('message', async message => {
 
     } else if(command === 'clash'){
         let getList = async () => {
-            let response = await axios.get('https://oc1.api.riotgames.com/lol/clash/v1/tournaments?api_key=RGAPI-31bdddc2-bc62-42a4-8a5c-c6ab00f8c8f4')
+            let response = await axios.get(`https://oc1.api.riotgames.com/lol/clash/v1/tournaments?api_key=${riotApiKey}`)
             let clash = response.data
             return clash
         }
@@ -65,5 +70,5 @@ client.on('message', async message => {
 
 
 //This must be the last line
-client.login('NzczMzI5ODY0OTMyOTgyODE2.X6Hpjw.6-4hdyKf4LOWCmSFwIbOqx7u_Vo')
+client.login(`${discBotKey}`)
 
