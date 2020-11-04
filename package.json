@@ -1,0 +1,24 @@
+{
+  "name": "botjerry",
+  "version": "1.0.0",
+  "description": "Discord Bot",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danielrhodesy/botJerry.git"
+  },
+  "author": "Daniel Rhodes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danielrhodesy/botJerry/issues"
+  },
+  "homepage": "https://github.com/Danielrhodesy/botJerry#readme",
+  "dependencies": {
+    "discord.js": "^12.4.1",
+    "node": "^15.0.1",
+    "npm": "^6.14.8"
+  }
+}
